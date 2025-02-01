@@ -20,4 +20,4 @@ var isPalindrome = function (x) {
     return rev === x;
 }
 let x  = 121;
-console.log(isPalindrome(x));
+console.log(isPalindrome());
