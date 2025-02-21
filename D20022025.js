@@ -1,5 +1,5 @@
 /** Date - 20/02/2025
-  2695. Array Wrapper169. Majority Element
+  2695. Array Wrapper
  * 
  * Problem Statement:- Create a class ArrayWrapper that accepts an array of integers in its constructor. This class should have two features:
 
