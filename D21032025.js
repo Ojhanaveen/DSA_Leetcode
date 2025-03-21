@@ -28,30 +28,25 @@ C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer.
 **/
 
-var romanTOIntegers = function(s){
+var romanToInteger = function(s) {
     let romanValue = {
-        "I":1,
-        "V":5,
-        "X":10,
-        "L":50,
-        "C":100,
-        "D":500,
-        "M":1000,
+        "I": 1, "V": 5, "X": 10, "L": 50,
+        "C": 100, "D": 500, "M": 1000
     };
 
     let ans = 0;
-    for(let i = 0; i < s.length; i++){
-        let currentVal = s[i];
-        let romanVal = romanValue[currentVal];
-        let nextVal = romanValue[currentVal + 1 || 0];
 
-        if(romanVal < nextVal){
-            ans = ans - romanVal;
-        }else{
-            ans = ans + romanVal;
+    for (let i = 0; i < s.length; i++) {
+        let romanVal = romanValue[s[i]];
+        let nextVal = romanValue[s[i + 1]] || 0; // Fixed index issue
+
+        if (romanVal < nextVal) {
+            ans -= romanVal;
+        } else {
+            ans += romanVal;
         }
     }
     return ans;
 };
-let s = "LVIII";
-console.log(romanTOIntegers(s));
+let s = "IX";
+console.log(romanToInteger(s));
