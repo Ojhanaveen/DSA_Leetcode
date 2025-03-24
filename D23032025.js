@@ -6,7 +6,6 @@
  *  return true if the number of occurrences of each value in the array is unique or false otherwise.
 */
 
-const { Container } = require("postcss");
 
 var uniqueOccurrences = function(arr){
     const map = new Map();
